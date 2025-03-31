@@ -15,7 +15,21 @@ describe('CalculatriceService', () => {
 
   it('devrait additionner deux nombres', () => {
     const result = service.calculer(2, 3, '+');
-    console.log('Résultat :', result);
-    expect(result).equal(5);
+    expect(result).toBe(5);
+  });
+
+  it('devrait soustraire deux nombres', () => {
+    const result = service.calculer(5, 3, '-');
+    expect(result).toBe(2);
+  });
+
+  it('devrait multiplier deux nombres', () => {
+    const result = service.calculer(4, 5, '*');
+    expect(result).toBe(20);
+  });
+
+  it('devrait diviser deux nombres', () => {
+    const result = service.calculer(6, 3, '/');
+    expect(result).toBe(2);
   });
 });
