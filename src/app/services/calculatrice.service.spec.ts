@@ -61,4 +61,16 @@ describe('CalculatriceService', () => {
     const result = service.calculer(-6, 3, '/');
     expect(result).toBe(-2);
   });
+
+  it('Ajouter a l\'historique', () => {
+    service.calculer(2, 3, '+');
+    service.calculer(5, 3, '-');
+    
+    
+    const history = service.getHistory();
+    expect(history.length).toBe(2);
+    expect(history[0]).toBe('2 + 3 = 5');
+    expect(history[1]).toBe('5 - 3 = 2');
+  });
 });
+
