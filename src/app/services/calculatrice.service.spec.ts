@@ -13,4 +13,9 @@ describe('CalculatriceService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('devrait additionner deux nombres', () => {
+    expect(service.calculer(2, 3, '+')).toBe(5);
+  });
+  
 });
