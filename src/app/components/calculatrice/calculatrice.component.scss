@@ -1,0 +1,24 @@
+.screen {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  button {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  
+  button:active {
+    background-color: #ccc;
+  }
+  

@@ -1,12 +1,29 @@
 <h1>Calculatrice</h1>
 
-<input data-cy="input1" type="number" placeholder="Nombre 1">
-<select data-cy="operateur">
-  <option value="+">+</option>
-  <option value="-">-</option>
-  <option value="*">*</option>
-</select>
-<input data-cy="input2" type="number" placeholder="Nombre 2">
-<button data-cy="egal">Calculer</button>
+<div class="screen">
+  <input data-cy="display" type="text" [value]="display" readonly />
+</div>
 
-<p>Résultat: <span data-cy="result">0</span></p>
+<div class="button-container">
+  <button data-cy="1" (click)="ajouterChiffre('1')">1</button>
+  <button data-cy="2" (click)="ajouterChiffre('2')">2</button>
+  <button data-cy="3" (click)="ajouterChiffre('3')">3</button>
+  <button data-cy="plus" (click)="ajouterOperateur('+')">+</button>
+
+  <button data-cy="4" (click)="ajouterChiffre('4')">4</button>
+  <button data-cy="5" (click)="ajouterChiffre('5')">5</button>
+  <button data-cy="6" (click)="ajouterChiffre('6')">6</button>
+  <button data-cy="moins" (click)="ajouterOperateur('-')">-</button>
+
+  <button data-cy="7" (click)="ajouterChiffre('7')">7</button>
+  <button data-cy="8" (click)="ajouterChiffre('8')">8</button>
+  <button data-cy="9" (click)="ajouterChiffre('9')">9</button>
+  <button data-cy="multiplication" (click)="ajouterOperateur('*')">*</button>
+
+  <button data-cy="clear" (click)="clear()">C</button>
+  <button data-cy="0" (click)="ajouterChiffre('0')">0</button>
+  <button data-cy="egal" (click)="calculer()">=</button>
+  <button data-cy="division" (click)="ajouterOperateur('/')">/</button>
+</div>
+
+<p>Résultat: <span data-cy="result">{{ result }}</span></p>

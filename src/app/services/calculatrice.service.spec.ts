@@ -16,6 +16,6 @@ describe('CalculatriceService', () => {
   it('devrait additionner deux nombres', () => {
     const result = service.calculer(2, 3, '+');
     console.log('Résultat :', result);
-    expect(result).toEqual(5);
+    expect(result).equal(5);
   });
 });
