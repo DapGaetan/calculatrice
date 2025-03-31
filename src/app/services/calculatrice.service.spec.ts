@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { CalculatriceService } from './calculatrice.service';
 
 describe('CalculatriceService', () => {
@@ -16,9 +15,7 @@ describe('CalculatriceService', () => {
 
   it('devrait additionner deux nombres', () => {
     const result = service.calculer(2, 3, '+');
-    console.log('Resultat :', result);
-    expect(result).toBe(5);
+    console.log('Résultat :', result);
+    expect(result).toEqual(5);
   });
-  
-  
 });
