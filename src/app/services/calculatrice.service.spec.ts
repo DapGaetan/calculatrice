@@ -34,7 +34,7 @@ describe('CalculatriceService', () => {
   });
 
   it('devrait renvoyer NaN pour une division par zéro', () => {
-    const result = service.calculer(6, 0, '/');
+    const result = service.calculer(5, 0, '/');
     expect(result).toBeNaN();
   });
 

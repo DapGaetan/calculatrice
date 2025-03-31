@@ -39,5 +39,15 @@ module.exports = tseslint.config(
       ...angular.configs.templateAccessibility,
     ],
     rules: {},
+  },
+  {
+    files: ["**/*.spec.ts", "**/*.test.ts"],
+    extends: [
+      "plugin:jasmine/recommended",
+    ],
+    rules: {
+      "no-unused-expressions": "off",
+      "no-undef": "off",
+    },
   }
 );
