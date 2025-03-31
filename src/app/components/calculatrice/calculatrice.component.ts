@@ -21,11 +21,12 @@ export class CalculatriceComponent {
 
   ajouterChiffre(chiffre: string) {
     if (chiffre === '-') {
-      this.display += '-';
+      this.display = '-' + this.display;
     } else {
       this.display += chiffre;
     }
   }
+  
   
 
   ajouterOperateur(operateur: string) {
@@ -43,7 +44,10 @@ export class CalculatriceComponent {
   }
 
   clear() {
-    this.display = '';
+    this.nombre1 = '';
+    this.nombre2 = '';
     this.result = 0;
+    this.operateur = '+';
   }
+  
 }

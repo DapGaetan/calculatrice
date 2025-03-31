@@ -19,4 +19,5 @@ export class CalculatriceService {
         throw new Error('Opérateur non supporté');
     }
   }
+  
 }
