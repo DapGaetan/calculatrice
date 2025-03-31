@@ -5,10 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class CalculatriceService {
 
-  constructor() { }
-
-  // Ajout d'une fonction vide pour pas planter le test
   calculer(a: number, b: number, operateur: string): number {
-    return 0;
-  }
+    switch (operateur) {
+      case '+':
+        return a + b;
+      case '-':
+        return a - b;
+      case '*':
+        return a * b;
+      default:
+        throw new Error('Opérateur non supporté');
+    }
+  }  
 }

@@ -15,7 +15,10 @@ describe('CalculatriceService', () => {
   });
 
   it('devrait additionner deux nombres', () => {
-    expect(service.calculer(2, 3, '+')).toBe(5);
+    const result = service.calculer(2, 3, '+');
+    console.log('Resultat :', result);
+    expect(result).toBe(5);
   });
+  
   
 });
