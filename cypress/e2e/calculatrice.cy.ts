@@ -50,11 +50,13 @@ describe('Calculatrice', () => {
     cy.get('[data-cy="8"]').click();
     cy.get('[data-cy="plus"]').click();
     cy.get('[data-cy="2"]').click();
+    cy.get('[data-cy="egal"]').click();
     cy.get('[data-cy="multiplication"]').click();
     cy.get('[data-cy="3"]').click();
     cy.get('[data-cy="egal"]').click();
     cy.get('[data-cy="result"]').should('have.text', '30');
   });
+  
 
   it('Effectue un test avec un seul chiffre', () => {
     cy.visit('http://localhost:4200');

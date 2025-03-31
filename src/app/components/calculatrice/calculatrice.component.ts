@@ -20,8 +20,13 @@ export class CalculatriceComponent {
   constructor(private calculatriceService: CalculatriceService) {}
 
   ajouterChiffre(chiffre: string) {
-    this.display += chiffre;
+    if (chiffre === '-') {
+      this.display += '-';
+    } else {
+      this.display += chiffre;
+    }
   }
+  
 
   ajouterOperateur(operateur: string) {
     if (this.display !== '') {
