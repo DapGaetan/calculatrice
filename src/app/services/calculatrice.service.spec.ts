@@ -32,4 +32,33 @@ describe('CalculatriceService', () => {
     const result = service.calculer(6, 3, '/');
     expect(result).toBe(2);
   });
+
+  it('devrait renvoyer NaN pour une division par zéro', () => {
+    const result = service.calculer(6, 0, '/');
+    expect(result).toBeNaN();
+  });
+
+  it('devrait lancer une erreur pour un opérateur inconnu', () => {
+    expect(() => service.calculer(2, 3, '%')).toThrowError('Opérateur non supporté');
+  });
+
+  it('devrait additionner un nombre négatif', () => {
+    const result = service.calculer(-5, 3, '+');
+    expect(result).toBe(-2);
+  });
+
+  it('devrait soustraire un nombre négatif', () => {
+    const result = service.calculer(5, -3, '-');
+    expect(result).toBe(8);
+  });
+
+  it('devrait multiplier un nombre négatif', () => {
+    const result = service.calculer(-4, 5, '*');
+    expect(result).toBe(-20);
+  });
+
+  it('devrait diviser un nombre négatif', () => {
+    const result = service.calculer(-6, 3, '/');
+    expect(result).toBe(-2);
+  });
 });
