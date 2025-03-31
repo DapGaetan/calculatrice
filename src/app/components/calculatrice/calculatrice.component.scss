@@ -1,24 +1,58 @@
 .screen {
     margin-bottom: 20px;
     text-align: center;
-  }
-  
-  button {
+}
+
+button {
     width: 60px;
     height: 60px;
     margin: 5px;
     font-size: 20px;
     cursor: pointer;
-  }
-  
-  .button-container {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.button-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     max-width: 240px;
     margin: 0 auto;
-  }
-  
-  button:active {
+}
+
+button:active {
     background-color: #ccc;
-  }
-  
+}
+
+.historique {
+    margin-top: 20px;
+    max-width: 240px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.historique h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.historique ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.historique li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
